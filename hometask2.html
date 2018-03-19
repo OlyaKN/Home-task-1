@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Test</title>
+ </head>
+ <body>
+   <p id="surname"></p>
+   <span id="name"></span>
+   <span id="patronymic"></span>
+   <p id="age"></p>
+   <p id="sex"></p>
+   <script>
+   var surname = prompt('Ваша фамилия?');
+   var name = prompt('Ваше имя?');
+   var patronymic = prompt('Ваше отчество?');
+   document.getElementById('name').innerHTML = `Фамилия Имя Отчество: ${surname} ${name} ${patronymic}`;
+   var age = prompt('Ваш возраст?');
+   document.getElementById('age').innerHTML = `Возраст: ${age}`;
+   var sex = confirm('Ваш пол мужской?')
+   document.getElementById('sex').innerHTML = !sex ? "Пол: женский" : "Пол: мужской";
+   </script>
+ </body>
+</html>
