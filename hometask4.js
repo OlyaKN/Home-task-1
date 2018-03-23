@@ -10,9 +10,12 @@ rl.question('Ваша фамилия? ', (answerSurname) => {
       rl.setPrompt('Ваш возраст? ');
       rl.prompt();
       rl.on('line', (answerAge) => {
-       console.log(`Фамилия Имя Отчество: ${answerSurname} ${answerName} ${answerPatronymic} Возраст: ${answerAge}`);
-       rl.close();
+        if (isNaN(answerAge)) {console.log('Введите число!');
+        } else {
+          console.log('Фамилия Имя Отчество: ' + answerSurname + ' ' + answerName + ' ' + answerPatronymic + ' Возраст: ' + answerAge);
+        };
+        rl.close();
+      });
     });
-   });
   });
 });

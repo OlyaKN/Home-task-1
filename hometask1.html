@@ -15,6 +15,11 @@
    var patronymic = prompt('Ваше отчество?');
    document.getElementById('name').innerHTML = 'Фамилия Имя Отчество: ' + surname + ' ' + name + ' ' + patronymic;
    var age = prompt('Ваш возраст?');
+   while (isNaN(age)) {
+     alert ('Введите число!');
+     var age = prompt('Ваш возраст?');
+   }
+   document.getElementById('age').innerHTML = 'Возраст: ' + age;
    document.getElementById('age').innerHTML = 'Возраст: ' + age;
    var sex = confirm('Ваш пол мужской?')
    document.getElementById('sex').innerHTML = !sex ? "Пол: женский" : "Пол: мужской";
